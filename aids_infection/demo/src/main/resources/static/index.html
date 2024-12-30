@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDS Prediction Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('OIP.jpeg'); /* Ganti dengan URL gambar Anda */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- Form -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h1 class="text-center text-success mb-4">AIDS Prediction Form</h1>
+                    <form id="predictionForm" class="row g-3">
+                        <div class="col-md-6">
+                            <label for="time" class="form-label">Time</label>
+                            <input type="number" id="time" name="time" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="trt" class="form-label">Treatment</label>
+                            <input type="number" id="trt" name="trt" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="age" class="form-label">Age (Years)</label>
+                            <input type="number" id="age" name="age" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="wtkg" class="form-label">Weight (kg)</label>
+                            <input type="number" id="wtkg" name="wtkg" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="hemo" class="form-label">Hemophilia</label>
+                            <select id="hemo" name="hemo" class="form-select" required>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="homo" class="form-label">Homosexual Activity</label>
+                            <select id="homo" name="homo" class="form-select" required>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="drugs" class="form-label">Drug Use History</label>
+                            <select id="drugs" name="drugs" class="form-select" required>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="karnof" class="form-label">Karnofsky Score</label>
+                            <input type="number" id="karnof" name="karnof" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="oprior" class="form-label">Non-ZDV Antiretroviral Therapy Pre-175</label>
+                            <select id="oprior" name="oprior" class="form-select" required>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="z30" class="form-label">ZDV in 30 Days Pre-175</label>
+                            <select id="z30" name="z30" class="form-select" required>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="preanti" class="form-label">Days Pre-175 Anti-retroviral Therapy</label>
+                            <input type="number" id="preanti" name="preanti" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="race" class="form-label">Race</label>
+                            <select id="race" name="race" class="form-select" required>
+                                <option value="0">White</option>
+                                <option value="1">Non-white</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select id="gender" name="gender" class="form-select" required>
+                                <option value="0">Female</option>
+                                <option value="1">Male</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="str2" class="form-label">Antiretroviral History</label>
+                            <select id="str2" name="str2" class="form-select" required>
+                                <option value="0">Naive</option>
+                                <option value="1">Experienced</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="strat" class="form-label">Antiretroviral History Stratification</label>
+                            <select id="strat" name="strat" class="form-select" required>
+                                <option value="1">Antiretroviral Naive</option>
+                                <option value="2">&lt;=52 Weeks</option>
+                                <option value="3">&gt;52 Weeks</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="symptom" class="form-label">Symptom Indicator</label>
+                            <select id="symptom" name="symptom" class="form-select" required>
+                                <option value="0">Asymptomatic</option>
+                                <option value="1">Symptomatic</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="treat" class="form-label">Treatment Indicator</label>
+                            <select id="treat" name="treat" class="form-select" required>
+                                <option value="0">ZDV only</option>
+                                <option value="1">Others</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="offtrt" class="form-label">Off Treatment Before 96+/-5 Weeks</label>
+                            <select id="offtrt" name="offtrt" class="form-select" required>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cd40" class="form-label">CD4 at Baseline</label>
+                            <input type="number" id="cd40" name="cd40" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cd420" class="form-label">CD4 at 20+/-5 Weeks</label>
+                            <input type="number" id="cd420" name="cd420" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cd80" class="form-label">CD8 at Baseline</label>
+                            <input type="number" id="cd80" name="cd80" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cd820" class="form-label">CD8 at 20+/-5 Weeks</label>
+                            <input type="number" id="cd820" name="cd820" class="form-control" required>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-success w-100">Submit</button>
+                        </div>
+                    </form>
+                    <div id="result" class="text-center mt-4">
+                        <h3>Prediction Result: <span id="predictionResult" class="text-danger"></span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
